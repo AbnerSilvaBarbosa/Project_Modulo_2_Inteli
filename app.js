@@ -9,7 +9,7 @@ const rotas = require("./Routes/routes.js") // Trazendo os codigos de outra api 
 const app = express()
 app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
-app.use(express.static("../Frontend"))
+app.use(express.static("./Frontend"))
 
 
 const UserRoutes = require("./Routes/user.js")
@@ -27,8 +27,8 @@ app.use("/vaga",VagaRoutes)
 app.use("/adm", AdmRoutes)
 
 
-app.use("/",express.static("../Frontend/views"))
-app.use("/adm",express.static("../Frontend/views/ADM"))
+app.use("/",express.static("./Frontend/views"))
+app.use("/adm",express.static("./Frontend/views/ADM"))
 
 
 // Iniciando o servidor localmente na porta 3000
