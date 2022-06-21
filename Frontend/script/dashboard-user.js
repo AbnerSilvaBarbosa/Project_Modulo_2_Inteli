@@ -26,7 +26,7 @@ function logadoUser() {
     updateSoftSkills(Softskills)
 
     $.ajax({
-        url: "http://localhost:3000/user/listVagaUser",
+        url: "/user/listVagaUser",
         method: "POST",
         data: {
             id_candidata: usuario.id_candidata
@@ -106,7 +106,7 @@ function loginUser(email,senha) {
 
 
     $.ajax({
-        url: "http://localhost:3000/user/loginUser",
+        url: "/user/loginUser",
         method: "POST",
         data: {
             email: email,
@@ -129,7 +129,7 @@ function loginUser(email,senha) {
 // submeter ao banco de dados infos da candidata editadas no perfil 
 function editarUser(id_candidata, localizacao, cargo, grauDeInstrução, hardskill, softskill) {
     $.ajax({
-        url: "http://localhost:3000/user/editarUser",
+        url: "/user/editarUser",
         method: "PUT",
         data: {
             id_candidata: id_candidata,
@@ -162,7 +162,7 @@ function editarUser(id_candidata, localizacao, cargo, grauDeInstrução, hardski
 // deletar conta da candidata do banco de dados
 function deleteUser(id_candidata) {
     $.ajax({
-        url: "http://localhost:3000/user/deleteCandidata",
+        url: "/user/deleteCandidata",
         method: "DELETE",
         data: {
             id_candidata: id_candidata
@@ -182,7 +182,7 @@ function deleteUser(id_candidata) {
 function descandidaturaUser(id_vaga) {
 
     $.ajax({
-        url: 'http://localhost:3000/user/descandidatura',
+        url: '/user/descandidatura',
         method: 'POST',
         data: {
             id_vaga: id_vaga,
