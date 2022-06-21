@@ -107,7 +107,7 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
                 } else {
 
                     $.ajax({
-                        url: "http://localhost:3000/user/verifyEmail",
+                        url: "/user/verifyEmail",
                         method: "POST",
                         data: {
                             Email_candidata: forms1.EmailCandidata
