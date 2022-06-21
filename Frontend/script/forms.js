@@ -65,13 +65,13 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
                 }, 5000)
             }
             else {
-                if (forms1.CelularCandidata == "(__) _____-____") {
+                if (forms1.CelularCandidata == "") {
                     errorCelular.innerHTML = "Numero de celular obrigatório"
                     window.scroll(0, 0)
                     setTimeout(function () {
                         errorCelular.innerHTML = ""
                     }, 5000)
-                } else if (forms1.CPFCandidata == "___.___.___-__") {
+                } else if (forms1.CPFCandidata == "") {
                     errorCPF.innerHTML = "CPF necessário"
                     window.scroll(0, 0)
                     setTimeout(function () {
