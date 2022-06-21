@@ -1,0 +1,192 @@
+.botao {
+    width: 145px;
+    height: 56px;
+    border: 1px solid #000000;
+    border-radius: 21px;
+}
+
+.textoFinal {
+    font-size: 1.3em;
+    font-family: 'Roboto Slab';
+    text-decoration: underline;
+}
+
+.backgroundVaga {
+    background-image: url("../../images/Background.svg");
+    height: auto;
+}
+
+#AplicantesCards{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.roxoesc {
+    background: #820EC7;
+}
+
+.roxoclaro {
+    background: #EA63FD;
+}
+
+.CardCandidata {
+    margin-top: 20px;
+    padding: 14px;
+    width: 335px;
+    height: 180px;
+    border-radius: 21px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.CardCandidata a:hover {
+    color: #F7DF94;
+}
+
+.nomeCand {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    margin-bottom: 2px;
+
+}
+
+#contato {
+    margin: 0%;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#porcentagem {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.CV {
+    display: flex;
+    width: 300px;
+    justify-content: flex-end;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.CV img {
+    margin-right: 10px;
+}
+
+.CV a { 
+    color: white;
+    text-decoration: none;
+}
+
+.CV a:hover {
+    color: white;
+}
+
+.CV span {
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.espacamento {
+    display: flex;
+    gap: 10px;
+}
+
+#softskillsContainer,
+#hardskillsContainer {
+    width: 75%;
+    border-top: 1px solid rgba(0, 0, 0, 0.123);
+    padding-top: 10px;
+}
+
+.form-control {
+    width: 75%;
+}
+h4 { 
+    margin-top: 30px;
+}
+
+.skill {
+    border: 3px solid #fcde7c;
+    padding: 6px 17px;
+
+    background: rgba(250, 218, 129, 0.31);
+    font-family: 'Nunito';
+    font-weight: 600;
+    
+    display: flex;
+    align-items: center;
+    
+    width: auto;
+
+    cursor: default;
+}
+
+ i {
+    font-size: 0.8rem;
+    font-style: normal;
+    cursor: pointer;
+    margin-left: .4rem;
+}
+
+.closeHardSkill::after,
+.closeSoftSkill::after {
+    content: "✕";
+    height: 24px;
+    width: 24px;
+}
+
+.descrição{
+    max-width: 60ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.saveButton, 
+.saveButton :focus {
+    background-color: rgb(81, 227, 132);
+    color: white;
+    border: none;
+}  
+
+
+
+.saveButton:hover {
+    background-color: rgb(20, 163, 70);
+}
+.hardSkillTag,
+.softSkillTag {
+    border: 3px solid #f3c42e;
+    padding: 6px 17px;
+
+    background: rgba(233, 184, 51, 0.31);
+    font-family: 'Nunito';
+    font-weight: 600;
+
+    margin-top: 30px;
+    margin-right: 10px;
+
+    border: 3px solid #F3C42E;
+    
+
+    display: flex;
+    align-items: center;
+    
+    width: auto;
+    border-radius: 21px;
+    cursor: default;
+}

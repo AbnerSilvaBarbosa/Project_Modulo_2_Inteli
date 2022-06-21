@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --cor--principal: #530084;
+    --cor--secundaria: #1A1A1A;
+    --cor--tercia:#F3C42E;
+    --cor--quarta:#69B748;
+}
+nav{
+    background-color: #FFFFFF;
+    height: 4.7em;  
+
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #FBFBFB;
+}
+
+.description {
+    padding: 3px;
+    margin-top: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #000000;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+
+
+.titles {
+    margin-top: 10px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    
+    color: #000000;
+
+}
+
+#name {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    color: #280044;
+}
+
+.firstprofile{
+    margin-left: 80px;
+}
+
+#img{
+    margin-left: 2px;
+
+}
+
+.hardSkillTag,
+.softSkillTag {
+    border: 3px solid #f3c42e;
+    padding: 6px 17px;
+
+    background: rgba(233, 184, 51, 0.31);
+    font-family: 'Nunito';
+    font-weight: 600;
+
+    margin-top: 30px;
+    margin-right: 10px;
+
+    border: 3px solid #F3C42E;
+    
+
+    display: flex;
+    align-items: center;
+    
+    width: auto;
+    border-radius: var(--bs-border-radius-pill)!important;
+    cursor: default;
+}
+
+.popup{
+    width: 400px;
+    background: rgba(217, 217, 217,0);
+    backdrop-filter: blur(1rem);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    border: 5px solid #401511;
+    box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* .bg-image{
+    filter: blur(8px);
+} */
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: 1;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupclose{
+    display: none;
+}
+
+.botao{
+    margin: 10px;
+    height: auto;
+}
+
+#voltar {
+    position: absolute;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin-left:30px;
+    margin-top: 5px;
+    color: purple;
+}
+
+#logomarca {
+    margin: 12.8px 107.2px;
+}
+
+button {
+    width: 140.8px;
+    height: 38px;
+}
+
+#classelado {
+    text-align: center;
+    margin-left: 6em;
+}
+
+#inputzin {
+    margin-top: 35px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+.container {
+   font-family: 'Nunito';
+   font-size: small;
+   outline-color: #280044;
+}
+
+h2{
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.appliedCard { 
+    border-radius: 21px;
+    height: 165px;
+}
+
+.appliedCard a {
+    text-decoration: none;
+}
+
+
+.appliedCard a h1 {
+    font-family: 'Roboto Slab';
+    color: black;
+}
+
+.appliedCard a p {
+    color: rgb(85, 85, 85);
+}
+
+.appliedCard button {
+    background-color: transparent;
+    border: none;
+}
+
+.saveButton, 
+.saveButton :focus {
+    background-color: rgb(81, 227, 132);
+    border-radius: 5px;
+    color: white;
+    padding: 6px;
+    border: none;
+}  
+
+
+
+.saveButton:hover {
+    background-color: rgb(20, 163, 70);
+}
+
+.espacamento {
+    display: flex;
+    gap: 10px;
+}
+
+#softskillsContainer,
+#hardskillsContainer {
+    width: 450px;
+    border-top: 1px solid rgba(0, 0, 0, 0.123);
+    padding-top: 10px;
+}
+
+
+.skill {
+    border: 3px solid #fcde7c;
+    padding: 6px 17px;
+
+    background: rgba(250, 218, 129, 0.31);
+    font-family: 'Nunito';
+    font-weight: 600;
+    
+    display: flex;
+    align-items: center;
+    
+    width: auto;
+
+    cursor: default;
+}
+
+ i {
+    font-size: 0.8rem;
+    font-style: normal;
+    cursor: pointer;
+    margin-left: .4rem;
+}
+
+.closeHardSkill::after,
+.closeSoftSkill::after {
+    content: "✕";
+    height: 24px;
+    width: 24px;
+}
+
+.descrição{
+    max-width: 60ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

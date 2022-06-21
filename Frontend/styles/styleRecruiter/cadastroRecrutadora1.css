@@ -1,0 +1,118 @@
+body {
+    background-image: url("../../images/Background.svg");
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    font-family: 'Roboto Slab';
+}
+
+img {
+    margin: 1em 6.5em;
+}
+
+nav {
+    background-color: white;
+    width: 103%;
+    height: 4.7em;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+}
+
+.tamanho {
+    height: 79px;
+    width: 430px;
+    border-radius: 11px;
+}
+
+p {
+    color: white;
+    margin-left: -28.7%;
+    size: 50px;
+}
+
+.inputBit {
+    height: 79px;
+    width: 430px;
+    border-radius: 11px;
+    gap: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .inputBit {
+        width: 80%;
+    }
+
+    .imagemprocess {
+        width: 80%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+
+/* From uiverse.io by @Voxybuns */
+.button_top {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: rgba(255, 255, 255, 0.3);
+    --button_outline_color: #F3C42E;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin: 12px;
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.25em 1.0em;
+    background: var(--button_color);
+    color: white;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.button_top:hover {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+
+.logo {
+    border: 6px dashed white;
+    padding: 50px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 290px;
+    margin: 16px 0;
+}

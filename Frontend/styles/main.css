@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+
+:root {
+    --cor--principal: #530084;
+    --cor--secundaria: #1A1A1A;
+    --cor--tercia: #F3C42E;
+    --cor--quarta: #69B748;
+}
+
+label {
+    display: none;
+}
+
+nav {
+    background-color: white;
+    height: 4.7em;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    margin: 0.8em 6.7em;
+    width: 100px;
+    height: 50px;
+}
+
+input {
+    outline-color: #A77EBF;
+}
+
+
+.inputBit {
+    width: 60%;
+    height: 69px;
+    border-radius: 11px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Código para animação, a ideia é que haja uma mudança no eixo Y de 15px e uma mudança de opacidade */
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btnproprio {
+    background-color: white;
+    width: auto;
+    padding: 10px;
+    font-size: 22px;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 11px;
+
+    font-family: 'Roboto Slab', serif;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: var(--cor--principal);
+    text-align: center;
+}
+
+.normal {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: auto;
+    padding: 10px;
+    font-size: 22px;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 11px;
+
+    font-family: 'Roboto Slab', serif;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: var(--cor--principal);
+    text-align: center;
+}
+
+.btnproprio:hover {
+    background-color: rgb(210, 210, 210);
+    transform: scale(1.08);
+    transition: 1s;
+}
+
+a {
+    color: white;
+    font-family: 'Roboto Slab';
+    justify-content: center;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A77EBF;
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 18px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #d0d0d0;
+    transition: 2s;
+    outline: none;
+}
+
+
+.popup {
+    width: 400px;
+    background: rgba(217, 217, 217, 0);
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    border: 5px solid #401511;
+    box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* .bg-image{
+    filter: blur(8px);
+} */
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -40%) scale(1);
+
+
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupclose{
+    display: none;
+}
+
+
+.sucesso {
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 0;
+    color: #F3C42E;
+}

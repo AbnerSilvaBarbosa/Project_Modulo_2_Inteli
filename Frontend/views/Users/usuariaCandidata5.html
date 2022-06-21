@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/styleUsers/usuariaCandidata5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="modal.js"></script>
+    <link rel="stylesheet" type="text/css" href="angulo-circulo-esquerda.svg">
+</head>
+
+<body onload="logadoUser()">
+    <nav class="shadow mb-2 bg-body rounded">
+        <span>
+            <img id="logomarca" src="../../images/logo.svg" width="100px" height="50px"
+                alt="Logo da brazilians in tech">
+        </span>
+    </nav>
+
+
+    <div class="row">
+        <div class="col-3 background">
+            <a class="d-flex justify-content-center fs-3" id="voltar" href="./usuariaCandidata1.html"><img
+                    src="../../images/angulo-circulo-esquerda.svg" alt=""></a>
+            <div class="firstprofile">
+                <div id="img" class="mt-5">
+                    <img class="ms-4" src="../../images/CandidataProfile.svg" alt="Ícone">
+                </div>
+
+                <h4 id="name"></h4>
+                <button type="button" onclick="edit()" id="editButton" class="botao btn btn-secondary">EDITAR
+                    PERFIL</button>
+                <button type="button" onclick="openPopup()" id="botao" class="botao btn btn-danger">EXCLUIR
+                    CONTA</button>
+            </div>
+
+
+        </div>
+
+        <div class="col-6 col-sm-12 col-lg-7 d-flex" id="classecentro">
+            <div class="container mt-5">
+                <h5 class="titles">Localização:</h5>
+                <input disabled type="text" class="form-control" id="localizacao">
+                <div style="gap: 10px;" class="row mt-2 mb-2 boxInputs">
+
+                </div>
+
+
+                <h5 class="titles">Ocupação: </h5>
+                <select disabled class="form-select row select" name="Cargo_candidata" id="cargoCandidata">
+                    <option value="" selected disabled hidden>Área que deseja trabalhar</option>
+                    <option id='Administrador de Sistemas'>Administrador de Sistemas</option>
+                    <option id='Administrador do Banco de Dados (DBA)'>Administrador do Banco de Dados (DBA)</option>
+                    <option id='Analista de Mídias Sociais'>Analista de Mídias Sociais</option>
+                    <option id='Analista de Segurança de Informação'>Analista de Segurança de Informação</option>
+                    <option id='Analista de Sistemas'>Analista de Sistemas</option>
+                    <option id='Arquiteto de redes'>Arquiteto de redes</option>
+                    <option id='Ciência de dados'>Ciência de dados</option>
+                    <option id='Desenvolvedor mobile'>Desenvolvedor mobile</option>
+                    <option id='Engenharia de computação'>Engenharia de computação</option>
+                    <option id='Engenharia de software'>Engenharia de software</option>
+                    <option id='Especialista em e-Commerce'>Especialista em e-Commerce</option>
+                    <option id='Gestão de Tecnologia da Informação'>Gestão de Tecnologia da Informação</option>
+                    <option id='Jogos Digitais'>Jogos Digitais</option>
+                    <option id='Marketing Digital'>Marketing Digital</option>
+                    <option id='Profissional Help Desk'>Profissional Help Desk</option>
+                    <option id='Programador de Computador'>Programador de Computador</option>
+                    <option id='Programador web'>Programador web</option>
+                    <option id='Robótica'>Robótica</option>
+                    <option id='Segurança da informação'>Segurança da informação</option>
+                    <option id='Segurança de sistemas'>Segurança de sistemas</option>
+                    <option id='Técnico de informática'>Técnico de informática</option>
+                </select>
+
+                <h5 class="titles">Grau de Instrução: </h5>
+                <select disabled class="row form-select select" name="Escolaridade_candidata"
+                    id="escolaridadeCandidata">
+                    <option value="" disabled hidden selected>Grau de instrução</option>
+                    <option value="EM">Ensino Médio</option>
+                    <option value="SI">Superior Incompleto</option>
+                    <option value="SC">Superior Completo</option>
+                    <option value="PGI">Pós-Graduação Incompleta</option>
+                    <option value="PGC">Pós-Graduação Completa</option>
+                    <option value="MI">Mestrado Incompleto</option>
+                    <option value="MC">Mestrado Completo</option>
+                    <option value="DI">Doutorado Incompleto</option>
+                    <option value="DC">Doutorado Completo</option>
+                </select>
+
+                <h5 class="titles">Hard Skills: </h5>
+                <div class="row mt-4 hardSkillsContainer">
+                    <p id="errorHard" style="color: yellow;" class="d-flex justify-content-center mb-0"></p>
+                    <input placeholder="Digite a habilidade desejada e pressione ENTER" type="text" name="Hard-Skills"
+                        list="hardskillslist" id="hard-skills" disabled class="form-control">
+                    <datalist id="hardskillslist">
+                        <option value="JavaScript"></option>
+                        <option value="HTML/CSS"></option>
+                        <option value="Python"></option>
+                        <option value="SQL"></option>
+                        <option value="Java"></option>
+                        <option value="Node.js"></option>
+                        <option value="TypeScript"></option>
+                        <option value="C#"></option>
+                        <option value="Bash/Shell"></option>
+                        <option value="C++"></option>
+                        <option value="PHP"></option>
+                        <option value="PowerShell"></option>
+                        <option value="C"></option>
+                        <option value="Go"></option>
+                        <option value="Kotlin"></option>
+                        <option value="Rust"></option>
+                        <option value="Ruby"></option>
+                        <option value="Assembly"></option>
+                        <option value="Swift"></option>
+                        <option value="R"></option>
+                        <option value="VBA"></option>
+                        <option value="Matlab"></option>
+                        <option value="Groovy"></option>
+                        <option value="Objective-C"></option>
+                        <option value="Scala"></option>
+                        <option value="Perl"></option>
+                        <option value="Haskell"></option>
+                        <option value="Delphi"></option>
+                        <option value="Clojure"></option>
+                        <option value="Elixir"></option>
+                    </datalist>
+                </div>
+                <div id="hardskillsContainer" class="mb-3 mt-3 row espacamento"></div>
+
+                <h5 class="titles">Soft Skills: </h5>
+                <div class="row mt-4 softSkillsContainer">
+                    <p id="errorSoft" style="color: yellow;" class="d-flex justify-content-center mb-0"></p>
+                    <input placeholder="Digite a habilidade desejada e pressione ENTER" type="text" name="Soft-Skills"
+                        list="softSkillsList" id="soft-skills" class=" form-control" disabled>
+                    <datalist id="softSkillsList">
+                        <option value='Boa comunicação verbal'>
+                        <option value='Boa comunicação escrita'>
+                        <option value='Trabalho em equipe'>
+                        <option value='Solução de problemas'>
+                        <option value='Gerenciamento de tempo'>
+                        <option value='Pensamento crítico'>
+                        <option value='Boa tomada de decisões'>
+                        <option value='Organização'>
+                        <option value='Gerenciamento de estresse'>
+                        <option value='Adaptabilidade'>
+                        <option value='Gestão e resolução de conflitos'>
+                        <option value='Criatividade'>
+                        <option value='Desenvoltura'>
+                        <option value='Persuasão'>
+                        <option value='Abertura a críticas'>
+                        <option value='Atenção a detalhes'>
+                        <option value='Ética no trabalho'>
+                        <option value='Resiliência'>
+                        <option value='Definição de metas'>
+                        <option value='Otimismo'>
+                        <option value='Imaginação'>
+                        <option value='Inovação'>
+                        <option value='Autenticidade'>
+                        <option value='Generosidade'>
+                        <option value='Tolerância'>
+                        <option value='Humor'>
+                        <option value='Diplomacia'>
+                        <option value='Disciplina'>
+                        <option value='Comprometimento'>
+                        <option value='Responsabilidade'>
+                        <option value='Introspecção'>
+                        <option value='Despersonalização'>
+                        <option value='Inteligência emocional'>
+                        <option value='Capacidade de lidar com a diversidade'>
+                    </datalist>
+                </div>
+                <div id="softskillsContainer" class="mb-3 mt-3 row espacamento"></div>
+            </div>
+
+
+            <div class=" mt-5 container" id="classelado">
+                <h2>Vagas Aplicadas</h2>
+                <div class="vagasUser"></div>
+            </div>
+        </div>
+
+
+
+        <div class="backPopup" id="popupPai">
+            <div class="popup" id="popup">
+                <img src="../../images/incomodado.png">
+                <h2>Tem certeza que deseja excluir seu perfil?</h2>
+
+                <button type="button" onclick="closePopup()">Não</button>
+                <button type="button" onclick="deleteUser()" style="background-color:red ;">Sim</button>
+
+                <div class="backPopup" id="popupPai">
+                    <div class="popup" id="popup">
+                        <div id="logo"></div>
+                        <img src="../../images/incomodado.png">
+                        <h2>Tem certeza que deseja excluir seu perfil?</h2>
+
+                        <button type="button" onclick="closePopup()">Não</button>
+                        <button type="button" onclick="" style="background-color:red ;">Sim</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <script>
+                let popup = document.getElementById("popup");
+
+                function edit() {
+
+                    const selects = document.querySelectorAll('select, input')
+                    // const inputs = document.querySelectorAll('input')
+                    const editButton = document.querySelector('#editButton')
+
+                    const divHardSkills = document.querySelector('#hardskills')
+                    const divSoftSkills = document.querySelector('#softskills')
+
+                    const input = document.createElement('input')
+
+                    for (let i = 0; i < selects.length; i++) {
+                        selects[i].disabled = false
+                    }
+
+                    editButton.setAttribute("class", "saveButton botao")
+                    editButton.setAttribute("onclick", "save()")
+                    editButton.innerHTML = 'SALVAR'
+                }
+
+                function save() {
+                    const selects = document.querySelectorAll('select, input')
+                    const editButton = document.querySelector('#editButton')
+
+                    for (let i = 0; i < selects.length; i++) { selects[i].disabled = true } // const
+                    const localizacao = document.querySelector('#localizacao').value
+                    const cargoCandidata = document.querySelector('#cargoCandidata').value
+                    const grauInstrucao = document.querySelector('#escolaridadeCandidata').value
+
+                    let softSkills = []
+                    const oldSoftSkillsSpans = document.querySelector('#softskillsContainer').querySelectorAll('span')
+                    const newSoftSkillsSpans = document.querySelectorAll('#softskills')
+
+                    for (let i = 0; i < oldSoftSkillsSpans.length; i++) {
+                        softSkills.push(oldSoftSkillsSpans[i].innerText)
+                    }
+
+                    for (let i = 0; i < newSoftSkillsSpans.length; i++) {
+                        softSkills.push(newSoftSkillsSpans[i].innerText)
+                    }
+
+                    let hardSkills = []
+                    const oldHardSkillsSpans = document.querySelector('#hardskillsContainer').querySelectorAll('span')
+                    const newHardSkillsSpans = document.querySelectorAll('#hardskills')
+
+                    for (let i = 0; i < oldHardSkillsSpans.length; i++) {
+                        hardSkills.push(oldHardSkillsSpans[i].innerText)
+                    }
+
+                    for (let i = 0; i < newHardSkillsSpans.length; i++) {
+                        hardSkills.push(newHardSkillsSpans[i].innerText)
+                    }
+
+                    let softSkillsDB = softSkills.toString()
+                    let hardSkillsDB = hardSkills.toString()
+                    console.log(hardSkills)
+                    //editarUser(localizacao, cargoCandidata, grauInstrucao)
+
+                    editarUser(JSON.parse(sessionStorage.getItem("UsuarioDadosLogin")).id_candidata, localizacao, cargoCandidata, grauInstrucao, hardSkillsDB, softSkillsDB)
+
+
+
+
+                    editButton.setAttribute("class", "botao btn btn-secondary")
+                    editButton.setAttribute("onclick", "edit()")
+                    editButton.innerHTML = 'EDITAR PERFIL'
+
+
+                }
+
+                function openPopup() {
+                    $("#popupPai").attr("class", "backPopup")
+                    popup.classList.add("open-popup");
+                }
+
+                function closePopup() {
+                    $("#popupPai").attr("class", "popupclose")
+                }
+
+
+                function deleteUser() {
+
+                    $.ajax({
+                        url: "http://localhost:3000/user/deleteCandidata",
+                        method: "DELETE",
+                        data: {
+                            id_candidata: JSON.parse(sessionStorage.getItem("UsuarioDadosLogin")).id_candidata
+                        },
+                        success: function () {
+                            sessionStorage.removeItem("UsuarioDadosLogin");
+                            window.localtion.replace("/views/index.html")
+                        },
+                        error: function () {
+                        }
+                    })
+                }
+
+            </script>
+
+            <script src="../../script/api-localidades.js"></script>
+            <script src="../../script/tagInputs/softSkillsTagInput.js"></script>
+            <script src="../../script/tagInputs/hardSkillsTagInput.js"></script>
+
+            <script src="../../script/dashboard-user.js"></script>
+</body>
+
+</html>

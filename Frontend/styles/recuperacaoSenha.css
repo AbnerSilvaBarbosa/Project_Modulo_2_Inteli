@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+h3 {
+    
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 4em;
+    font-family: 'Roboto Slab';
+
+}
+
+
+/* O FIGMA é uma ótima ferramenta, mas recomendo que não o leve tão a sério rs
+
+sempre tente otimizar evitar algumas propriedades que ele gera como a "top, left,
+right, bottom" elas dificultam a responsividade do site :) 
+
+parabéns pela atenção aos detalhes :D */
+
+.card {
+    height: 30em;
+    width: 520px;
+
+    background: rgba(255, 253, 253, 0.2);
+    border-radius: 40px;
+
+    padding: 80px; 
+
+    margin-top: 50px;
+}
+
+#input {
+
+    /* COMENTEI AFIM DE VOCÊ PODER COMPARAR COM O NOVO CÓDIGO, MUITA COISA
+    SE MANTÉM A MESMA; A IDEIA É ADAPATAR ALGUNS VALORES MTO GRANDES
+
+        border-radius: 30px;
+        height: 60px;
+        width: 3229px;
+        left: 1030px;
+        top: 383px;
+        border-radius: 30px;
+        border-style: none;
+        display: grid;
+        place-items: center;
+        margin-left: 35%;
+    */
+
+    border-radius: 30px;
+    height: 60px;
+    border-style: none;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.botao {
+
+    /*
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+    height: 50.47517776489258px;
+    width: 152.3405456542969px;
+    left: 1030px;
+    top: 383px;
+    border-radius: 30px;
+    border-style: none;
+    margin: auto;
+    */
+
+    border-radius: 30px;
+    border-style: none;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+p{
+    color: #FFFDFD;
+    text-align: center;
+    font-size: x-small;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+/* POR VOCÊ TER COLOCADO UM ID NO CAMPO DE TEXTO ESSA ESTILIZAÇÃO ACABA
+SENDO DESNECESSÁRIA :/
+input{
+
+    text-align: center;
+    height: 60.47517776489258px;
+    width: 252.3405456542969px;
+    left: 1030px;
+    top: 383px;
+    
+}
+*/
+
+a {
+    color: #FFFFFF;
+    font-size: smaller;
+}
+
+form {
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+/* EFEITOS ESPECIFICOS DA SEGUNDA TELA DE RECUPERAÇÃO DE SENHA */
+
+@keyframes bounce{
+    0%, 20%, 60%, 100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+#efeito:hover {
+    animation: bounce 2.7s;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 80%;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+   
+   
+ }

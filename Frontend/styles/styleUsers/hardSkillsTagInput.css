@@ -1,0 +1,45 @@
+/* TagsInput */
+
+.hardSkillsContainer .hardSkillTag {
+    background: rgba(233, 184, 51, 0.31);
+    color: white;
+
+    border: 3px solid #F3C42E;
+    border-radius: 20px;
+
+    font-size: 1.2rem;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 30px;
+
+    width: auto;
+    animation: up 0.7s;
+
+    cursor: default;
+}
+
+.hardSkillTag i {
+    font-size: 0.8rem;
+    font-style: normal;
+
+    margin-left: .4rem;
+
+    transform: translateY(0.08rem);
+}
+
+.closeHardSkill::after {
+    content: "✕";
+    height: 24px;
+    width: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .hardSkillsContainer {
+        width: 70%;
+    }
+
+ }

@@ -1,0 +1,206 @@
+.cardsVagas {
+    display: flex;
+    width: 400px;
+    height: 191px;
+    border-radius: 36px;
+    box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+#logo {
+    margin-right: 30px;
+    margin-top: 0;
+    width: 50%;
+    height: 50%;
+}
+
+#logo img {
+    margin: 0;
+}
+
+.cardsVagas a {
+    align-items: center;
+}
+.textdescript {
+    font-family: 'Nunito';
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.vagas {
+    display: flex;
+}
+
+a img{
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardsVagas {
+        width: 80%;
+        margin-right: 0px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form-control {
+    position: relative;
+    margin: 80px 0 40px;
+    background-color: transparent;
+    border: none;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #8D8D8D solid;
+    display: block;
+    width: 320px;
+    padding: 2px 0;
+    font-size: 18px;
+    color: #8D8D8D;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 300px center;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: #8D8D8D;
+}
+
+.form-control label {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: #8D8D8D;
+    transform: translateY(-30px);
+}
+
+.headContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    align-items: flex-end;
+}
+
+.title h2 {
+    font-family: 'Roboto Slab';
+    color: #280044;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.title h3 {
+    font-family: 'Roboto Slab';
+    color: #280044;
+    font-size: 18px;
+    text-align: right;
+}
+
+.popup{
+    width: 400px;
+    background: rgba(217, 217, 217,0);
+    backdrop-filter: blur(1rem);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    border: 5px solid #401511;
+    box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* .bg-image{
+    filter: blur(8px);
+} */
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: 1;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.none{
+    display: none;
+}
+
+.textdescript{
+    max-width: 23ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
