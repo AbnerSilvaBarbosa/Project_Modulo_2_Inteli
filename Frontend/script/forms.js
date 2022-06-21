@@ -80,24 +80,27 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
 
                 } else if (!forms1.LocalizacaoCandidata) {
                     errorDate.innerHTML = "Localização necessária"
-                    window.scroll(0, 0)
+                    window.scroll(0, 520)
+                    setTimeout(function(){
+                        errorDate.innerHTML = ""
+                    })
                 } else if (!forms1.NascimentoCandidata) {
                     errorDate.innerHTML = "Data necessária"
-                    window.scroll(0, 150)
+                    window.scroll(0, 580)
                     setTimeout(function () {
                         errorDate.innerHTML = ""
                     }, 5000)
 
                 } else if (!forms1.GeneroCandidata) {
                     errorGenero.innerHTML = "Gênero necessário"
-                    window.scroll(0, 160)
+                    window.scroll(0, 590)
                     setTimeout(function () {
                         errorGenero.innerHTML = ""
                     }, 5000)
                 } else if (!forms1.SenhaCandidata) {
 
                     errorSenha.innerHTML = "Senha obrigatoria"
-                    window.scroll(0, 170)
+                    window.scroll(0, 600)
                     setTimeout(function () {
                         errorSenha.innerHTML = ""
                     }, 5000)
@@ -125,7 +128,7 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
 
                                 }, error: function (res) {
                                     console.log(res)
-                                    errorCPF.innerHTML = res.responseJSON.error
+                                    errorCPF.innerHTML = res.responseJSON
                                     window.scroll(0, 0)
                                     setTimeout(function () {
                                         errorCPF.innerHTML = ""
@@ -139,7 +142,7 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
                         },
                         error: function (res) {
                             console.log(res)
-                            errorEmail.innerHTML = res.responseJSON.error
+                            errorEmail.innerHTML = res.responseJSON
                             window.scroll(0, 0)
                             setTimeout(function () {
                                 errorEmail.innerHTML = ""
