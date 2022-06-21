@@ -79,7 +79,7 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
                     }, 5000)
 
                 } else if (!forms1.LocalizacaoCandidata) {
-                    error.innerHTML = "Localização necessária"
+                    errorDate.innerHTML = "Localização necessária"
                     window.scroll(0, 0)
                 } else if (!forms1.NascimentoCandidata) {
                     errorDate.innerHTML = "Data necessária"
