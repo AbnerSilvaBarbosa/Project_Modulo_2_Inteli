@@ -115,7 +115,7 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
                         success: function (res) {
 
                             $.ajax({
-                                url: "http://localhost:3000/user/verifyCPF",
+                                url: "/user/verifyCPF",
                                 method: "POST",
                                 data: {
                                     CPF_candidata: forms1.CPFCandidata
