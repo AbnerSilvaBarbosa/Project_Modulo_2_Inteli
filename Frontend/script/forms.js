@@ -487,7 +487,7 @@ function catchVacancyData() {
 // enviar infos do cadastro da candidata para o banco de dados
 function sendUserData(Nome_Candidata, Escolaridade_candidata, Email_candidata, CPF_canditada, Genero_canditada, Data_nascimento, Curriculo_candidata, Softskill_candidata, Senha_canditada, Cargo_canditada, Celular_candidata, Localizacao_Candidata, Status_candidata, Hardskill_candidata) {
     $.ajax({
-        url: "http://localhost:3000/user/formCandidata",
+        url: "/user/formCandidata",
         method: "POST",
         data: {
             Nome_Candidata: Nome_Candidata,
@@ -516,7 +516,7 @@ function sendUserData(Nome_Candidata, Escolaridade_candidata, Email_candidata, C
 // enviar infos do cadastro da companhia para o banco de dados
 function sendRecruitData(NomeEmpresa, EmailEmpresa, RamoAtividade, Logo_Empresa, SenhaEmpresa, Cultura_Empresa, TelefoneEmpresa, SiteEmpresa, CnpjEmpresa, LocalizacaoEmpresa) {
     $.ajax({
-        url: "http://localhost:3000/recruiter/formEmpresa",
+        url: "/recruiter/formEmpresa",
         method: "POST",
         data: {
             Nome_Empresa: NomeEmpresa,
@@ -543,7 +543,7 @@ function sendRecruitData(NomeEmpresa, EmailEmpresa, RamoAtividade, Logo_Empresa,
 // enviar para banco de dados uma vaga cadastrada
 function sendVacancyData(SoftskillVaga, NomeVaga, DescricaoVaga, LocalVaga, SalarioVaga, IdEmpresa, HardskillVaga, ModalidadeVaga) {
     $.ajax({
-        url: "http://localhost:3000/vaga/formVagas",
+        url: "/vaga/formVagas",
         method: "POST",
         data: {
             SoftskillVaga: SoftskillVaga,
@@ -565,7 +565,7 @@ function sendVacancyData(SoftskillVaga, NomeVaga, DescricaoVaga, LocalVaga, Sala
 
 function delvaga(id_vaga) {
     $.ajax({
-        url: "http://localhost:3000/vaga/deleteVagas",
+        url: "/vaga/deleteVagas",
         method: "DELETE",
         data: {
             id_vaga: id_vaga
@@ -588,7 +588,7 @@ function loginUser() {
 
 
     $.ajax({
-        url: "http://localhost:3000/user/loginUser",
+        url: "/user/loginUser",
         method: "POST",
         data: {
             email: email_candidata,
@@ -614,7 +614,7 @@ function loginRecruit() {
     let senha_empresa = document.querySelector("#password").value
 
     $.ajax({
-        url: "http://localhost:3000/recruiter/loginRecruit",
+        url: "/recruiter/loginRecruit",
         method: "POST",
         data: {
             email: email_empresa,
@@ -636,7 +636,7 @@ function loginRecruit() {
 function listAll() {
 
     $.ajax({
-        url: "http://localhost:3000/rotas/listAllVgasUser",
+        url: "/rotas/listAllVgasUser",
         method: "GET",
         success: function (res) {
             console.log(res)

@@ -8,7 +8,7 @@ function loadVagas() {
     $("#email").html(EmpresaInfos.email_empresa) // coloca as informações da empresa logando diretamente no frontend
 
     $.ajax({
-        url: 'http://localhost:3000/recruiter/listAllEmpresaVagas', // porta da rota
+        url: '/recruiter/listAllEmpresaVagas', // porta da rota
         method: 'POST',
         data: { // o que será enviado (req.body)
             id_empresa: EmpresaInfos.id_empresas
@@ -55,7 +55,7 @@ function logadoRecruit(email,senha) {
     $("senha").val(Recruit.senha_empresa)
 
     $.ajax({ // o que acontece quando aplicado o método POST, caso correto salvar no session store as infos da empresa
-        url: "http://localhost:3000/recruiter/loginRecruit",
+        url: "/recruiter/loginRecruit",
         method: "POST",
         data: {
             email: email,
@@ -82,7 +82,7 @@ function loadVagaInformation() { // função para carregar as informações da v
     const id_vaga = getUrlParameter.get('id_vaga')
 
     $.ajax({
-        url: `http://localhost:3000/rotas/listVagaInfo?id_vaga=${id_vaga}`,
+        url: `/rotas/listVagaInfo?id_vaga=${id_vaga}`,
         method: 'POST', 
         success: (res) => {
             console.log(res) // abaixo as classes estão sendo linkados com os valores dos inputs inseridos
@@ -98,7 +98,7 @@ function loadVagaInformation() { // função para carregar as informações da v
             updateSoftSkills(softSkills)
 
             $.ajax({
-                url: 'http://localhost:3000/rotas/listCandidatas',
+                url: '/rotas/listCandidatas',
                 method: 'POST',
                 data: {
                     id_vaga: id_vaga
@@ -183,7 +183,7 @@ function loginRecruit(email,senha) { // função de login para recrutadores
   
 
     $.ajax({
-        url: "http://localhost:3000/recruiter/loginRecruit",
+        url: "/recruiter/loginRecruit",
         method: "POST",
         data: {
             email: email,
@@ -207,7 +207,7 @@ function loginRecruit(email,senha) { // função de login para recrutadores
 function EditCompany(id_empresa, logo, email, senha, telefone, site, localização, ramo, cultura) { // função para editar os dados das empresas
 
     $.ajax({
-        url: "http://localhost:3000/recruiter/editEmpresa",
+        url: "/recruiter/editEmpresa",
         method: "PUT",
         data: {
             id_empresa: id_empresa,
@@ -243,7 +243,7 @@ function EditCompany(id_empresa, logo, email, senha, telefone, site, localizaç�
 
 function editVaga(softskill, descricao, salario, hardskill, modalidade, local) { // função para editar os dados dos usuários
     $.ajax({
-        url: "http://localhost:3000/vaga/editVaga",
+        url: "/vaga/editVaga",
         method: "PUT",
         data: {
             id_vaga: getUrlParameter.get("id_vaga"),

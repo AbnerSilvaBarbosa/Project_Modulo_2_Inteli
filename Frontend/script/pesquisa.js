@@ -5,7 +5,7 @@ function pesquisa() {
     let x = document.getElementsByClassName('vagas');
     if (input.lenght >= 3) {
         $.ajax({
-            url: 'http://localhost:3000/vaga/listAllVgasUser',
+            url: '/vaga/listAllVgasUser',
             type: 'GET',
             data: { input: input },
             success: data => {

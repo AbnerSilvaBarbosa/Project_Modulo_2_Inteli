@@ -10,7 +10,7 @@ function loadData() {
 //função apenas para a dashboard. retorna apenas os números de candidatas
 function loadCandidatas() {
     $.ajax({
-        url: "http://localhost:3000/adm/listCandidatas",
+        url: "/adm/listCandidatas",
         type: 'GET',
         success: (res) => {
             $("#qtnCandidatas").html(res.length)
@@ -21,7 +21,7 @@ function loadCandidatas() {
 // função apenas para a dashboard. retorna apenas os números de empresas
 function loadEmpresasParceiras() {
     $.ajax({
-        url: "http://localhost:3000/adm/listEmpresasParceiras",
+        url: "/adm/listEmpresasParceiras",
         type: 'GET',
         success: (res) => {
             $("#qtnEmpresas").html(res.length)
@@ -51,7 +51,7 @@ function loadEmpresasParceiras() {
 // função carrega 
 function loadEmpresasSolicitantes() {
     $.ajax({
-        url: 'http://localhost:3000/adm/listEmpresasSolicitantes',
+        url: '/adm/listEmpresasSolicitantes',
         type: 'GET',
         success: (res) => {
             const tbody = document.querySelector('tbody')
@@ -75,7 +75,7 @@ function loadEmpresasSolicitantes() {
 // função apenas para a dashboard. retorna apenas os números de vagas
 function loadVagas() {
     $.ajax({
-        url: "http://localhost:3000/adm/listAllVagas",
+        url: "/adm/listAllVagas",
         type: 'GET',
         success: (res) => {
             $("#qtnVagas").html(res.length)
@@ -108,7 +108,7 @@ function loadVagas() {
 function liberarEmpresa(id_empresa){
 
     $.ajax({
-        url:"http://localhost:3000/adm/liberarEmpresa",
+        url:"/adm/liberarEmpresa",
         method:"POST",
         data:{
             id_empresa:id_empresa
@@ -126,7 +126,7 @@ function liberarEmpresa(id_empresa){
 
 function bloquearEmpresa(id_empresa){
     $.ajax({
-        url:"http://localhost:3000/adm/bloquearEmpresa",
+        url:"/adm/bloquearEmpresa",
         method:"POST",
         data:{
             id_empresa:id_empresa
@@ -147,7 +147,7 @@ function loadDataEmpresa() {
     const rejectButton = document.querySelector('#rejectBtn')
 
     $.ajax({
-        url: 'http://localhost:3000/adm/loadDataEmpresa', 
+        url: '/adm/loadDataEmpresa', 
         type: 'POST',
         data: {
             id_empresa: id_empresa

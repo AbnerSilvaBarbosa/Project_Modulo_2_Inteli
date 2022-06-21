@@ -7,7 +7,7 @@ function catchMatchedVagas() {
     $("#titulo").html(candidataInfos.cargo_candidata)
 
     $.ajax({
-        url: 'http://localhost:3000/match/listMatch',
+        url: '/match/listMatch',
         method: 'POST',
         data: {
             id_candidata: candidataInfos.id_candidata
