@@ -32,6 +32,6 @@ app.use("/adm",express.static("../Frontend/views/ADM"))
 
 
 // Iniciando o servidor localmente na porta 3000
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor aberto http://localhost:3000")
 })
