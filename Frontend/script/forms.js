@@ -666,8 +666,11 @@ function delvaga(id_vaga) { // função que deleta vaga
 // enviar e-mail e senha informados quando do login de candidata na landing page
 function loginUser() {
 
-    let email_candidata = document.querySelector("#email").value.lowercase()
+    let email_candidata1 = document.querySelector("#email").value
     let senha_candidata = document.querySelector("#password").value
+
+    let email_candidata = email_candidata1.toLowerCase()
+
 
 
     $.ajax({
