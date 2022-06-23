@@ -13,9 +13,11 @@ function catchUserData() { // função que pega os dados de usuário de acordo c
     let errorSenha = document.querySelector("#errorSenha")
 
     //Tela de Cadastro 1
+    //lowercase
+
     let forms1 = {
         NomeCandidata: document.querySelector('#nomeCandidata').value,
-        EmailCandidata: document.querySelector('#emailCandidata').value,
+        EmailCandidata: document.querySelector('#emailCandidata').value.lowercase(),
         CelularCandidata: document.querySelector('#celularCandidata').value,
         CPFCandidata: document.querySelector('#cpfCandidata').value,
         GeneroCandidata: document.querySelector('#genero').value,
@@ -664,7 +666,7 @@ function delvaga(id_vaga) { // função que deleta vaga
 // enviar e-mail e senha informados quando do login de candidata na landing page
 function loginUser() {
 
-    let email_candidata = document.querySelector("#email").value
+    let email_candidata = document.querySelector("#email").value.lowercase()
     let senha_candidata = document.querySelector("#password").value
 
 
