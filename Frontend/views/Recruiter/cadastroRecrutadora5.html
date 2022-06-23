@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../styles/styleUsers/softSkillsTagInput.css">
+    <link rel="stylesheet" href="../../styles/styleUsers/hardSkillsTagInput.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/styleRecruiter/cadastroRecrutadora5.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Brazilians in Tech</title>
+</head>
+
+<body class="bg-image"
+    style="background-image: url('../../images/Background.svg'); height: 100%; background-repeat: no-repeat; background-size: cover; margin: 0;">
+    <header>
+        <div>
+            <nav>
+                <img class="logo" src="../../images/logo.svg" style="width: 110px;height: 45px;"
+                    alt="Logo Brazilians in Tech">
+            </nav>
+            <br>
+        </div>
+    </header>
+    <main>
+        <form id="form-2">
+            <div class="container cadastroRecrutadora5">
+                <div class="row text-center" style="animation: up 0.8s;">
+                    <h1 class="titulo-da-pagina mb-4"> Cadastro da vaga</h1>
+                    <br>
+                </div>
+                <div class="caixa" style="animation: up 2s backwards;">
+                    <div>
+                        <label for="nomeVaga">Em que área sua vaga se encaixa?</label>
+                        <p id="errorNome" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <select class="caixa2 border-0" name="Nome_vaga" id="nomeVaga">
+                            <option value="" selected disabled hidden>Área que está procurando?</option>
+                            <option value='Administrador de Sistemas'>Administrador de Sistemas</option>
+                            <option value='Administrador do Banco de Dados (DBA)'>Administrador do Banco de Dados (DBA)
+                            </option>
+                            <option value='Analista de Mídias Sociais'>Analista de Mídias Sociais</option>
+                            <option value='Analista de Segurança de Informação'>Analista de Segurança de Informação
+                            </option>
+                            <option value='Analista de Sistemas'>Analista de Sistemas</option>
+                            <option value='Arquiteto de redes'>Arquiteto de redes</option>
+                            <option value='Ciência de dados'>Ciência de dados</option>
+                            <option value='Desenvolvedor mobile'>Desenvolvedor mobile</option>
+                            <option value='Engenharia de computação'>Engenharia de computação</option>
+                            <option value='Engenharia de software'>Engenharia de software</option>
+                            <option value='Especialista em e-Commerce'>Especialista em e-Commerce</option>
+                            <option value='Gestão de Tecnologia da Informação'>Gestão de Tecnologia da Informação
+                            </option>
+                            <option value='Jogos Digitais'>Jogos Digitais</option>
+                            <option value='Marketing Digital'>Marketing Digital</option>
+                            <option value='Profissional Help Desk'>Profissional Help Desk</option>
+                            <option value='Programador de Computador'>Programador de Computador</option>
+                            <option value='Programador web'>Programador web</option>
+                            <option value='Robótica'>Robótica</option>
+                            <option value='Segurança da informação'>Segurança da informação</option>
+                            <option value='Segurança de sistemas'>Segurança de sistemas</option>
+                            <option value='Técnico de informática'>Técnico de informática</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="descricaoVaga">Descrição da vaga</label>
+                        <!-- INSERIR CONTADORES DE CARACTERES-->
+                        <p id="errorDescricao" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <TEXTarea id="descricaoVaga" maxlength="600" class="textarea border-0"
+                            placeholder="Descrição da vaga"></TEXTarea>
+                    </div>
+                    <div>
+                        <label for="modalidade">Modalidade</label>
+                        <p id="errorModalidade" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <select class="caixa2 border-0" id="modalidade">
+                            <option value="" selected disabled hidden>Modalidade</option>
+                            <option value='Presencial'>Presencial</option>
+                            <option value='Remoto'>Remoto</option>
+                            <option value='Híbrido'>Híbrido</option>
+                        </select>
+
+                    </div>
+                    <div>
+                        <label for="localizacao">Localização</label>
+                        <p id="errorLocal" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <input id="localizacao" class="input input2 border-0" type="text"
+                            placeholder="Localização da vaga" />
+                    </div>
+                    <div>
+                        <p class="texto"> Soft skills </p>
+                    </div>
+                    <div class="row mt-4 softSkillsContainer">
+                        <label for="soft-skills">Digite as soft-skills necessárias</label>
+                        <p id="errorSoft" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <input placeholder="Digite a habilidade desejada e pressione ENTER" type="text"
+                            name="Soft-Skills" list="softskillslist" id="soft-skills" class="input form-control">
+                        <datalist id="softskillslist">
+                            <option value='Boa comunicação verbal'>
+                            <option value='Boa comunicação escrita'>
+                            <option value='Trabalho em equipe'>
+                            <option value='Solução de problemas'>
+                            <option value='Gerenciamento de tempo'>
+                            <option value='Pensamento crítico'>
+                            <option value='Boa tomada de decisões'>
+                            <option value='Organização'>
+                            <option value='Gerenciamento de estresse'>
+                            <option value='Adaptabilidade'>
+                            <option value='Gestão e resolução de conflitos'>
+                            <option value='Criatividade'>
+                            <option value='Desenvoltura'>
+                            <option value='Persuasão'>
+                            <option value='Abertura a críticas'>
+                            <option value='Atenção a detalhes'>
+                            <option value='Ética no trabalho'>
+                            <option value='Resiliência'>
+                            <option value='Definição de metas'>
+                            <option value='Otimismo'>
+                            <option value='Imaginação'>
+                            <option value='Inovação'>
+                            <option value='Autenticidade'>
+                            <option value='Generosidade'>
+                            <option value='Tolerância'>
+                            <option value='Humor'>
+                            <option value='Diplomacia'>
+                            <option value='Disciplina'>
+                            <option value='Comprometimento'>
+                            <option value='Responsabilidade'>
+                            <option value='Introspecção'>
+                            <option value='Despersonalização'>
+                            <option value='Inteligência emocional'>
+                            <option value='Capacidade de lidar com a diversidade'>
+                        </datalist>
+                    </div>
+                    <div>
+                        <p class="texto"> Hard skills </p>
+                    </div>
+                    <div class="row mt-4 hardSkillsContainer">
+                        <label for="hard-skills">Digite as Hard-Skills necessárias</label>
+                        <p id="errorHard" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                        <input placeholder="Digite a habilidade desejada e pressione ENTER" type="text"
+                            name="Hard-Skills" list="hardskillslist" id="hard-skills" class="form-control">
+                        <datalist id="hardskillslist">
+                            <option value="JavaScript"></option>
+                            <option value="HTML/CSS"></option>
+                            <option value="Python"></option>
+                            <option value="SQL"></option>
+                            <option value="Java"></option>
+                            <option value="Node.js"></option>
+                            <option value="TypeScript"></option>
+                            <option value="C#"></option>
+                            <option value="Bash/Shell"></option>
+                            <option value="C++"></option>
+                            <option value="PHP"></option>
+                            <option value="PowerShell"></option>
+                            <option value="C"></option>
+                            <option value="Go"></option>
+                            <option value="Kotlin"></option>
+                            <option value="Rust"></option>
+                            <option value="Ruby"></option>
+                            <option value="Assembly"></option>
+                            <option value="Swift"></option>
+                            <option value="R"></option>
+                            <option value="VBA"></option>
+                            <option value="Matlab"></option>
+                            <option value="Groovy"></option>
+                            <option value="Objective-C"></option>
+                            <option value="Scala"></option>
+                            <option value="Perl"></option>
+                            <option value="Haskell"></option>
+                            <option value="Delphi"></option>
+                            <option value="Clojure"></option>
+                            <option value="Elixir"></option>
+                        </datalist>
+                    </div>
+                    <div>
+                        <p class="texto"> Salário (opcional)</p>
+                    </div>
+                    <div>
+                        <label for=""></label>
+                        <input class="input border-0" type="text" placeholder="Salário (R$)" id="salarioVaga" />
+                    </div>
+
+                    <!-- INSERIR MODALIDADE DE VAGAS-->
+
+        </form>
+
+
+        <div>
+            <!--  TEMPLATE BOTÃO VOLTAR -->
+            <div class="col d-flex align-items-center justify-content-center">
+
+                <button type="button" class="btnproprio" onclick="catchVacancyData()">Cadastrar vaga</button>
+                <a class="row" style="margin-left: 30px;" href="../Recruiter/companyDashboard.html">Voltar</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('input').keypress(function (e) {
+                var code = null;
+                code = (e.keyCode ? e.keyCode : e.which);
+                return (code == 13) ? false : true;
+            });
+        });
+
+        document.querySelector('#form-2').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.body.append('Submetido')
+        })
+
+
+
+    </script>
+
+    <script src="../../script/tagInputs/softSkillsTagInput.js"></script>
+    <script src="../../script/tagInputs/hardSkillsTagInput.js"></script>
+    <script src="../../script/forms.js"></script>
+</body>
+
+</html>

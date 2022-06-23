@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+:root {
+    --cor--principal: #530084;
+    --cor--secundaria: #1A1A1A;
+    --cor--tercia:#F3C42E;
+    --cor--quarta:#69B748;
+}
+nav{
+    background-color: white;
+    height: 4.7em;
+    position: fixed;
+    width: 100%;
+}
+.cadastroRecrutadora5 {
+    width: 430px;
+    justify-content: center;
+}
+.logo{
+    margin: 1em 6.5em;
+}
+.titulo-da-pagina{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-top: 70px;
+}
+.caixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px;
+    justify-content: center;
+}
+.caixa2{
+    width: 430px;
+    height: 70px;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+textarea{
+    width: 430px;
+    height: 200px;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+input{
+    width: 430px;
+    height: 70px;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+input[type="text"]{
+    width: 430px;
+    height: 70px;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.texto{
+    font-family: 'Roboto Slab', serif;
+    text-align: right;
+    font-size: 20px;
+    color: white;
+    margin-top: 10%;
+}
+.soft1{
+    text-align: center;
+}
+.avanço{
+    font-family: 'Roboto Slab', serif;
+    border-radius: 100px;
+    border: var(--cor--tercia);
+    height: 35px;
+    margin-top: 15px;
+    background-color:#ffff;
+    color: var(--cor--principal);
+}
+
+.caixa2{
+    width: 430px;
+    height: 70px;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    text-align: center;  
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .caixa2{
+        width:350px ;
+    }
+
+    .textarea{
+        width: 350px;
+    }
+ 
+    
+
+    input[type="text"]{
+        width: 350px;
+        
+        border-radius: 11px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+ 
+ }

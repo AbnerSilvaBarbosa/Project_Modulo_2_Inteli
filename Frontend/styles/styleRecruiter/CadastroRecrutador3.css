@@ -1,0 +1,121 @@
+body {
+    background-image: url("../../images/Background.svg");
+    background-size: cover;
+    
+    color: white;
+    
+}
+
+nav {
+    height: auto;
+    background-color: white;
+    height: 4.7em;
+}
+
+.imagem{
+    margin: 1em 6.5em;
+}
+
+.cadastroBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legendaDados {
+    display: flex;
+    justify-content: start;
+
+    
+    margin-top: 0px;
+
+}
+
+.legendaContato {
+    display: flex;
+    justify-content: start;
+
+
+    margin-left: 10px
+
+}
+
+.legendaCadastro {
+    display: flex;
+    justify-content: start;
+
+    margin-left: 1.810px;
+    margin-bottom: 20px;
+
+}
+
+.areaInputs {
+    width: 60%;
+    height: 69px;
+    border-radius: 11px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.definirSenha {
+    display: flex;
+    justify-content: start;
+
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.proximaEtapa {
+
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    text-decoration: underline;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.elipse2 {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #F3C42E;
+    color: white;
+
+}
+
+.linha {
+    box-sizing: border-box;
+    position: absolute;
+    width: 46.58px;
+    height: 511.81px;
+    left: -33.69px;
+    top: 184.22px;
+    background: #FFFDFD;
+    border-radius: 30px;
+    transform: rotate(127.31deg);
+
+}
+
+@media only screen and (max-width: 600px) {
+    .imagemprocess{
+        width: 80%;
+    }
+
+    body{
+        background-size: contain;
+    }
+
+    .areaInputs{
+        width: 80%;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Administradora</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="../../styles/styleADM/ADMstyle-dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+
+</head>
+
+<body onload="loadData()">
+    <section id="menu">
+        <div class="logo">
+            <img class="log" src="../../images/logo.svg" style="width: 110px;height: 45px;"
+                alt="Logo Brazilians in Tech">
+        </div>
+        <div class="items">
+            <li><i class="fab fa-uikit"></i> <a href="./index.html">Dashboard </a></li>
+            <a href="./vagas.html">
+                <li><i class="fas fa-edit"></i></i>Vagas</li>
+            </a>
+            <a href="./empresas.html">
+                <li><i class="fas fa-chart-line"></i>Empresas</li>
+            </a>
+        </div>
+    </section>
+
+    <section id="interface">
+        <!-- <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="faz fa-bars"></i>
+                </div>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text"placeholder="Search">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <i class="fa-regular fa-person-walking-arrow-right"></i>
+            </div>
+        </div> -->
+        <h3 class="i-name">
+            Dashboard
+        </h3>
+
+        <div class="values">
+
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3 id="qtnCandidatas"></h3>
+                    <span>Novas usuárias</span>
+                </div>
+            </div>
+
+            <div class="val-box">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <h3 id="qtnEmpresas"></h3>
+                    <span>Empresas</span>
+                </div>
+            </div>
+
+            <div class="val-box">
+                <i class="fas fa-edit"></i>
+                <div>
+                    <h3 id="qtnVagas"></h3>
+                    <span>Vagas cadastradas</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="board">
+            <table>
+                <thead>
+                    <h3 class="i-name">
+                        Solicitantes
+                    </h3>
+                    <tr>
+                        <td>Empresa</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        $('#menu-btn').click(function () {
+            $('#menu').toggleClass("active");
+        })
+    </script>
+
+
+    <script src="../../script/adm.js"></script>
+</body>
+
+</html>

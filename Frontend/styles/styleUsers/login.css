@@ -1,0 +1,49 @@
+/* :root {
+    --white
+} */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+
+body{
+
+    background-color: #530084;
+   
+}
+
+div {
+
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 4em;
+    font-family: 'Roboto Slab';
+    
+    
+}
+
+.red{
+    background-color: red;
+}
+
+
+.blue{
+    background-color: blue;
+}
+
+h3 {
+
+    font-size: x-large;
+    text-align: center;
+    
+
+}
+
+a {
+    color: #FFFFFF;  
+}
+
+#e-mail {
+    border-radius: 30px;
+}
+
+#senha {
+    border-radius: 30px;
+}

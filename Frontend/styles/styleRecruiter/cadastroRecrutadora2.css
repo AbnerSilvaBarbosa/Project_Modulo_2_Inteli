@@ -1,0 +1,128 @@
+body {
+    color: white;
+    background-image: url("../../images/Background.svg");
+}
+
+nav {
+    height: auto;
+    background-color: white;
+    height: 4.7em;
+}
+
+.imagem{
+    margin: 1em 6.5em;
+}
+
+.cadastroBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.areaInputs {
+        height: 79px;
+        width: 430px;
+        border-radius: 11px;
+        gap: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+}
+
+
+.teste {
+    display: flex;
+    justify-content: start;
+
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.proximaEtapa {
+
+    display: flex;
+    justify-content: end;
+    margin-right: 5em;
+    text-decoration: underline;
+    font-family: 'Roboto Slab', serif;
+}
+
+.elipse2 {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #F3C42E;
+    color: white;
+
+}
+
+.linha {
+    box-sizing: border-box;
+    position: absolute;
+    width: 46.58px;
+    height: 511.81px;
+    left: -33.69px;
+    top: 184.22px;
+    background: #FFFDFD;
+    border-radius: 30px;
+    transform: rotate(127.31deg);
+}
+
+.bolinha {
+    box-sizing: border-box;
+    position: absolute;
+    width: 46.58px;
+    height: 45.52px;
+    left: 201.44px;
+    top: 585.59px;
+    background: #FFFDFD;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 30px;
+    transform: rotate(127.31deg);
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+
+   .imagemprocess{
+       width: 80%;
+   }
+
+   .areaInputs{
+       width: 80%;
+   }
+
+   nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+}
+
+.avanço1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+.avanço{
+    font-family: 'Roboto Slab', serif;
+    border-radius: 11px;
+    border: var(--cor--tercia);
+    padding: 10px;
+    background-color:#ffff;
+    color: var(--cor--principal);
+    text-align: center;
+}
+
+.avanço:hover {
+    background-color: rgb(211, 211, 211);
+    transform: scale(1.08);
+    transition: 1s;
+}

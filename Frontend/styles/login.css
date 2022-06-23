@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body {
+  background-image: url("../images/LoginBackground.svg");
+}
+
+div {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Roboto Slab';
+}
+
+.block {
+  margin-top: 5em;
+}
+
+
+input {
+  text-align: center;
+  border-radius: 30px;
+  height: 60px;
+  width: 300px;
+  left: 1030px;
+  top: 383px;
+  border-style: none;
+}
+
+form i {
+  cursor: pointer;
+}
+
+.user-select-all {
+  font-family: 'Nunito';
+}
+
+@media only screen and (max-width: 1000px) {
+
+  body {
+    background-image: url("../images/Background.svg");
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+.wrapper .option {
+  background: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 12px;
+}
+
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #A77EBF;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#option-1:checked:checked~.option-1,
+#option-2:checked:checked~.option-2 {
+  border-color: #A77EBF;
+  background: #A77EBF;
+}
+
+#option-1:checked:checked~.option-1 .dot,
+#option-2:checked:checked~.option-2 .dot {
+  background: #fff;
+}
+
+#option-1:checked:checked~.option-1 .dot::before,
+#option-2:checked:checked~.option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper .option span {
+  font-size: 16px;
+  color: #808080;
+}
+
+#option-1:checked:checked~.option-1 span,
+#option-2:checked:checked~.option-2 span {
+  color: #fff;
+}
+
+#togglePassword {
+  cursor: pointer;
+  position: center;
+}
+
+nav {
+  width: 100%;
+}
+
+footer {
+
+
+  width: 100%;
+  background-color: #530084;
+}
+
+
+.copyright {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 0;
+  font-family: 'nunito';
+
+}

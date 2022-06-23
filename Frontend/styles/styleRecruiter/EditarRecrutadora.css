@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --cor--principal: #530084;
+    --cor--secundaria: #1A1A1A;
+    --cor--tercia:#F3C42E;
+    --cor--quarta:#69B748;
+}
+nav{
+    background-color: #FFFFFF;
+    height: 4.7em;  
+
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url('../../images/BackgroundOpacity.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    background-color: #FBFBFB;
+    color: white;
+}
+
+.description {
+    padding: 3px;
+    margin-top: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #000000;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+
+
+.titles {
+    margin-top: 10px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+}
+
+#name {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+}
+
+.firstprofile{
+    margin-left: 80px;
+}
+
+#img{
+    margin-left: 2px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 11px;
+}
+
+textarea:disabled {
+    background-color: rgba(241, 241, 241, 0.199);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}   
+
+input:disabled {
+    background-color: rgba(241, 241, 241, 0.199);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 11px;
+    font-size: 20px;
+}
+
+.popup{
+    width: 400px;
+    background: rgba(217, 217, 217,0);
+    backdrop-filter: blur(1rem);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    border: 5px solid #401511;
+    box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.25);
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: 1;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupclose{
+    display: none;
+}
+
+.botao{
+    margin: 10px;
+    height: auto;
+}
+
+#voltar {
+    position: absolute;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin-left:30px;
+    margin-top: 5px;
+    color: purple;
+}
+
+#logomarca {
+    margin: 12.8px 107.2px;
+}
+
+button {
+    width: 140.8px;
+    height: 38px;
+}
+
+#classelado {
+    text-align: center;
+}
+
+#inputzin {
+    margin-top: 35px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+.container {
+   font-family: 'Nunito';
+   font-size: small;
+   outline-color: #280044;
+}
+
+h2{
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.appliedCard a {
+    text-decoration: none;
+}
+
+
+.appliedCard a h1 {
+    font-family: 'Roboto Slab';
+    color: black;
+}
+
+.appliedCard a p {
+    color: rgb(85, 85, 85);
+}
+
+.saveButton, 
+.saveButton :focus {
+    background-color: rgb(81, 227, 132);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 6px;
+}  
+
+
+
+.saveButton:hover {
+    background-color: rgb(20, 163, 70);
+}
+
+.descrição{
+    max-width: 60ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+.logo {
+    border: 6px dashed white;
+    padding: 50px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 290px;
+    margin: 16px 0;
+}
+
+.previewDiv {
+    width: 100%;
+
+}
+
+/* From uiverse.io by @Voxybuns */
+.button_top {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: rgba(255, 255, 255, 0.3);
+    --button_outline_color: #F3C42E;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin: 12px;
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.25em 1.0em;
+    background: var(--button_color);
+    color: white;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.button_top:hover {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}

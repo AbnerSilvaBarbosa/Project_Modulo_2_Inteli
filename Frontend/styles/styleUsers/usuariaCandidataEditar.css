@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --cor--principal: #530084;
+    --cor--secundaria: #1A1A1A;
+    --cor--tercia:#F3C42E;
+    --cor--quarta:#69B748;
+}
+
+body{
+    background-image: url(../../images/Background.svg);
+    
+}
+
+h1{
+    color: white;
+    font-family: 'Roboto Slab';
+    text-align: center;
+}
+
+#voltar {
+    position: absolute;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin-left:30px;
+    margin-top: 5px;
+    color: purple;    
+}

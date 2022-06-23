@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/styleUsers/cadastroUsuaria1.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+
+    <title>Brazilians in Tech</title>
+</head>
+
+
+<body class="bg-image" style="background-image: url('../../images/Background.svg');
+ background-repeat: no-repeat; background-size: cover; margin: 0;" onload="loadDataForms1User()">
+
+
+    <header>
+        <nav>
+            <img class="log" src="../../images/logo.svg" alt="Logo da Brazilians in Tech">
+        </nav>
+    </header>
+    <main style="animation: up 1.5s;">
+        <h1 class="titulo-da-pagina mt-4">Cadastre seu perfil</h1>
+
+
+        <form action="">
+            <div class="caixa">
+                <div class="mb-1 mt-4">
+                    <img src="../../images/CadastroUsuaria1ProgressBar.svg" alt="barra de progresso 1 - seus dados"
+                        srcset="">
+                </div>
+                <br>
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="nomeCandidata">Nome:</label>
+
+                    <p id="errorNome" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="nomeCandidata" class="caixa2 border-0 mb-0 " type="text" placeholder="Digite seu nome"
+                        name="Nome_candidata" required />
+                </div>
+
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="emailCandidata">Email:</label>
+
+                    <p id="errorEmail" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="emailCandidata" class="caixa2 border-0 mb-0" type="email" inputmode="email"
+                        placeholder="Digite seu melhor email" name="Email_candidata" required />
+                </div>
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="celularCandidata">Número do seu celular:</label>
+
+                    <p id="errorCelular" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="celularCandidata" class="caixa2 border-0 mb-0" type="text" inputmode="tel"
+                        placeholder="Digite o número do seu celular" name="Celular_candidata" />
+                </div>
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="cpfCandidata">Cadastro de pessoa física (CPF):</label>
+
+                    <p id="errorCPF" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="cpfCandidata" maxlength="14" class="caixa2 border-0" type="text" inputmode="numeric"
+                        placeholder="Digite seu CPF" name="CPF_candidata">
+
+                </div>
+
+                <!-- <label for="pais">Selecione seu país</label>
+                <select class="caixa2" name="Pais_candidata" id="pais">
+                </select>
+                <div class="mb-2 boxInputs">
+                    <label for="estado">Selecione seu estado</label>
+                    <select class="caixa4" name="UF_candidata" id="estado">
+                    </select>
+                    <label for="cidade">Selecione sua cidade</label>
+                    <select class="caixa3" name="Cidade_candidata" id="cidade">
+                    </select>
+                </div> -->
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="">Localização: </label>
+
+                    <p id="errorLocalizacao" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input placeholder="Digite sua localização" class="caixa2 border-0" name="Localizacao_candidata"
+                        id="localizacao" type="text">
+
+                </div>
+
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="data-nascimento">Data de nascimento:</label>
+
+                    <p id="errorData" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="data-nascimento" class="caixa2 border-0 mb-0" type="date"
+                        placeholder="Data de nascimento" name="Data_nascimento">
+
+                </div>
+
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="genero">Informe seu gênero:</label>
+
+                    <p id="errorGenero" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <select class="caixa2 border-0 mb-0" name="Genero_candidata" id="genero">
+                        <option class="opt-disabled" value="" disabled hidden selected>Informe seu gênero</option>
+                        <option value="mulher-cis">Mulher-Cis</option>
+                        <option value="homem-cis">Homem-Cis</option>
+                        <option value="mulher-cis">Mulher Trans</option>
+                        <option value="homem-trans">Homem Trans</option>
+                        <option value="nao-binario">Não-Binário</option>
+                        <option value="nao-resposta">Prefiro não responder</option>
+                    </select>
+
+                    <p id="errorGenero" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+                </div>
+
+                <div class="mb-2 boxInputs">
+                    <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
+                        for="senha">Crie uma senha:</label>
+
+                    <p id="errorSenha" style="color: yellow;" class="d-flex justify-content-center mb-2"></p>
+
+                    <input id="senha" class="caixa2 border-0 mb-0" name="Senha_candidata" type="password"
+                        placeholder="Crie uma senha" onkeyup="senhaforca()">
+                </div>
+
+                <div id="impForcaSenha"></div>
+
+            </div>
+
+
+
+
+        </form>
+
+        <div class="avanço1">
+            <button onclick="catchUserData()" class="btnproprio">Completar cadastro </button>
+            <a onclick="deleteCatchDataUser()" class="row" style="margin-left: 30px;"
+                href="../telaCadastro.html">Voltar</a>
+        </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+    <script>
+        // Mascara CPF e Telefone
+        Array.prototype.forEach.call(document.body.querySelectorAll("*[data-mask]"), applyDataMask); // coleta todos os inputs que conterem o atributo (data-mask)
+
+        //nas duas funções abaixo estará presente o mecanismo de verificação de força da senha
+        //ele pegará o valor do campo "senha", dado um "contador" inicial igual a 0 e concatenar-se-á ao longo do tamanho e complexidade da senha posta pelo usuário
+        function senhaforca() {
+            var password = document.getElementById('senha').value;
+            var forca = 0;
+            //document.getElementById("impSenha").innerHTML = "Senha " + password
+
+            if ((password.length >= 4) && (password.length <= 7)) {
+                forca += 10;
+            } else if (password.length > 7) {
+                forca += 25;
+            }
+
+            if ((password.length >= 5) && password.match(/[a-z]+/)) {
+                forca += 10;
+            }
+
+            if ((password.length >= 6) && password.match(/[A-Z]+/)) {
+                forca += 20;
+            }
+
+            if ((password.length >= 7) && password.match(/[@#$%&;*.?/|!'"()^~=`><:¨]+/)) {
+                forca += 25;
+            }
+
+            mostrarForca(forca)
+        }
+
+        function mostrarForca(forca) {
+
+
+            if (forca < 30) {
+                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #ff0000'>Senha Fraca</span>";
+            } else if ((forca >= 30) && (forca < 50)) {
+                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #FFD700'>Senha Média</span>";
+            } else if ((forca >= 50) && (forca < 70)) {
+                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #7FFF00'>Senha Forte</span>";
+            } else if ((forca >= 70) && (forca < 100)) {
+                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #008000'>Senha Excelente</span>";
+            }
+
+        }
+
+        $(document).ready(function () {
+            var $seuCampoCel = $("#celularCandidata");
+            $seuCampoCel.mask('(00) 00000-0000');
+
+            var $seuCampoCPF = $("#cpfCandidata");
+            $seuCampoCPF.mask('000.000.000-00', { reverse: true });
+        });
+
+        function applyDataMask(field) {
+            var mask = field.dataset.mask.split('');
+
+
+            function stripMask(maskedData) {
+                function isDigit(char) {
+                    return /\d/.test(char);
+                }
+                return maskedData.split('').filter(isDigit);
+            }
+
+            function applyMask(data) {// troca o que tiver '_' pelo número digitado
+                return mask.map(function (char) {
+                    if (char != '_') return char;
+                    if (data.length == 0) return char;
+                    return data.shift();
+                }).join('')
+            }
+
+            function reapplyMask(data) {
+                return applyMask(stripMask(data));
+            }
+
+            //atualiza o campo de acordo com o que já foi digitado
+            function changed() {
+                var oldStart = field.selectionStart;
+                var oldEnd = field.selectionEnd;
+
+                field.value = reapplyMask(field.value);
+
+                field.selectionStart = oldStart;
+                field.selectionEnd = oldEnd;
+            }
+
+            //EventListners para que a função seja executada a cada mudança de tecla
+            field.addEventListener('click', changed)
+            field.addEventListener('keyup', changed)
+        }
+
+
+
+
+    </script>
+    <script src="../../script/api-localidades.js"></script>
+    <script src="../../script/cadastroUsuaria1.js"></script>
+    <script src="../../script/forms.js"></script>
+</body>
+
+</html>

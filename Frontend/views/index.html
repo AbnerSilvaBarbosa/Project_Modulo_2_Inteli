@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="../styles/login.css" rel="stylesheet">
+</head>
+
+<body class="bg-image">
+    <nav class=""><img src="../images/logo.svg" alt="Logo Brazilians in Tech" href=""></nav>
+    <div class="container" style="animation: up 2s;">
+        <div class="row">
+            <div class="col-lg-7">
+            </div>
+            <div class="block col col-sm-12 col-lg-5">
+                <div>
+                    <h1>Faça seu Login</h1><br>
+                    <p id="error" style="color: yellow; font-family:'Nunito'; font-weight: 600;"></p>
+                </div>
+                <form>
+                    <label class="inputLogin" for="email">Email</label>
+                    <input id="email" type="text" placeholder="E-mail" class="user-select-all"><br><br>
+                    <label class="inputLogin" for="password">Senhas</label>
+                    <input id="password" type="password" placeholder="Senha" class="user-select-all"><br><br>
+                    <i class="bi bi-eye-slash" id="togglePassword"> Visualizar senha</i><br>
+                    <br>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-1" checked>
+                        <input type="radio" name="select" id="option-2">
+                        <label for="option-1" class="option option-1">
+                            <div class="dot"></div>
+                            <span>Candidata</span>
+                        </label>
+                        <label for="option-2" class="option option-2">
+                            <div class="dot"></div>
+                            <span>Recrutadora</span>
+                        </label>
+                    </div>
+                    <button type="button" style="margin: 0;" class="btnproprio" id="btnLogin" href=""
+                        onclick="loginUser()">Entrar</button><br><br>
+                    <a href="./recuperacaoSenha1.html">Esqueci minha senha</a><br>
+                    <a href="./telaCadastro.html">Ainda não é cadastrada? Cadastre-se aqui!</a><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"> <a href="https://drive.google.com/file/d/1Z-8S2AnzUs53e_cnBP1ieegs5Bq0w9x8/view">Termos de Uso</a> </li>
+                        <li><a href="https://drive.google.com/file/d/14vnmvEezXTyu9CFwqiRk7RR8z6vrJXNX/view">Política de Privacidade</a>  </li>
+                    </ul>
+
+                    <p class="copyright">Copyright © Brazilians in Tech 2020. All Rights Reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+
+<script>
+
+    let candidata
+    let recrutadora
+    let btn = document.querySelector("#btnLogin")
+
+    $('#option-1').change(function () {
+        if ($(this).is(":checked")) {
+            btn.setAttribute("onclick", "loginUser()")
+        }
+    })
+    $("#option-2").change(function () {
+        if ($(this).is(":checked")) {
+            btn.setAttribute("onclick", "loginRecruit()")
+        }
+    })
+
+</script>
+
+<!-- alternar visualização da senha -->
+<script>
+
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
+
+    //manipulador de evento ao evento de clique do ícone
+    togglePassword.addEventListener("click", function () {
+        // alternar entre o atributo type
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        // alternar entre olho aberto e fechado
+        this.classList.toggle("bi-eye");
+    });
+
+    // prevenir submissão do form/evento
+    const form = document.querySelector("form");
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+    });
+
+</script>
+
+<!-- <script src="/src/Frontend/script/showhideSenhas.js"></script> -->
+<script src="../script/forms.js"></script>
+
+</html>
