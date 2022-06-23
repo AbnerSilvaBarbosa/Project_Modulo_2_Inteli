@@ -1,5 +1,5 @@
 nav {
-    width: 119%;
+    width: 100%;
 }
 
 .cardsVagas {
@@ -212,6 +212,7 @@ a img {
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     .filter {

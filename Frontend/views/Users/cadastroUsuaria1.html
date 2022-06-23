@@ -8,16 +8,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../../styles/styleUsers/cadastroUsuaria1.css">
     <link rel="stylesheet" href="../../styles/main.css">
 
     <title>Brazilians in Tech</title>
 </head>
 
-
 <body class="bg-image" style="background-image: url('../../images/Background.svg');
  background-repeat: no-repeat; background-size: cover; margin: 0;" onload="loadDataForms1User()">
-
 
     <header>
         <nav>
@@ -26,7 +25,6 @@
     </header>
     <main style="animation: up 1.5s;">
         <h1 class="titulo-da-pagina mt-4">Cadastre seu perfil</h1>
-
 
         <form action="">
             <div class="caixa">
@@ -112,7 +110,6 @@
 
                 </div>
 
-
                 <div class="mb-2 boxInputs">
                     <label style="color: white; margin-left: 5px; margin-top: 10px;" class="row form-label"
                         for="genero">Informe seu gênero:</label>
@@ -141,13 +138,11 @@
                     <input id="senha" class="caixa2 border-0 mb-0" name="Senha_candidata" type="password"
                         placeholder="Crie uma senha" onkeyup="senhaforca()">
                 </div>
+                <i class="bi bi-eye-slash" id="togglePassword"> Visualizar senha</i><br>
 
                 <div id="impForcaSenha"></div>
 
             </div>
-
-
-
 
         </form>
 
@@ -163,11 +158,12 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
 
     <script>
-        // Mascara CPF e Telefone
-        Array.prototype.forEach.call(document.body.querySelectorAll("*[data-mask]"), applyDataMask); // coleta todos os inputs que conterem o atributo (data-mask)
+        
+        // coleta todos os inputs que contiverem o atributo (data-mask)
+        Array.prototype.forEach.call(document.body.querySelectorAll("*[data-mask]"), applyDataMask);
 
-        //nas duas funções abaixo estará presente o mecanismo de verificação de força da senha
-        //ele pegará o valor do campo "senha", dado um "contador" inicial igual a 0 e concatenar-se-á ao longo do tamanho e complexidade da senha posta pelo usuário
+        //nas duas funções abaixo está presente o mecanismo de verificação de força da senha
+        //ele pegará o valor do campo "senha", dado um "contador" inicial igual a 0, que concatenar-se-á ao longo do tamanho e complexidade da senha posta pelo usuário
         function senhaforca() {
             var password = document.getElementById('senha').value;
             var forca = 0;
@@ -198,17 +194,18 @@
 
 
             if (forca < 30) {
-                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #ff0000'>Senha Fraca</span>";
+                document.getElementById('impForcaSenha').innerHTML = "<span class='impForcaSenha' style='color: #ff0000'>Senha Fraca</span>";
             } else if ((forca >= 30) && (forca < 50)) {
-                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #FFD700'>Senha Média</span>";
+                document.getElementById('impForcaSenha').innerHTML = "<span class='impForcaSenha' style='color: #FFD700'>Senha Média</span>";
             } else if ((forca >= 50) && (forca < 70)) {
-                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #7FFF00'>Senha Forte</span>";
+                document.getElementById('impForcaSenha').innerHTML = "<span class='impForcaSenha' style='color: #7FFF00'>Senha Forte</span>";
             } else if ((forca >= 70) && (forca < 100)) {
-                document.getElementById('impForcaSenha').innerHTML = "<span style='color: #008000'>Senha Excelente</span>";
+                document.getElementById('impForcaSenha').innerHTML = "<span class='impForcaSenha' style='color: #008000'>Senha Excelente</span>";
             }
 
         }
 
+        //função que aplica máscara aos inputs CFP e celular
         $(document).ready(function () {
             var $seuCampoCel = $("#celularCandidata");
             $seuCampoCel.mask('(00) 00000-0000');
@@ -216,7 +213,7 @@
             var $seuCampoCPF = $("#cpfCandidata");
             $seuCampoCPF.mask('000.000.000-00', { reverse: true });
         });
-
+        
         function applyDataMask(field) {
             var mask = field.dataset.mask.split('');
 
@@ -256,13 +253,38 @@
             field.addEventListener('keyup', changed)
         }
 
-
-
-
     </script>
+    
+    <!-- alternar visualização da senha -->
+    <div>
+        
+        <script>
+
+            const togglePassword = document.querySelector("#togglePassword");
+            const password = document.querySelector("#password");
+
+            //manipulador de evento ao evento de clique do ícone
+            togglePassword.addEventListener("click", function () {
+                // alternar entre o atributo type
+                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                password.setAttribute("type", type);
+
+                // alternar entre olho aberto e fechado
+                this.classList.toggle("bi-eye");
+            });
+
+            // prevenir submissão do form/evento
+            const form = document.querySelector("form");
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+            });
+
+        </script>
+    </div>
     <script src="../../script/api-localidades.js"></script>
-    <script src="../../script/cadastroUsuaria1.js"></script>
     <script src="../../script/forms.js"></script>
+    <script src="../../script/showhideSenhas.js"></script>
+
 </body>
 
 </html>

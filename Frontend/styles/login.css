@@ -12,9 +12,10 @@ div {
 }
 
 .block {
-  margin-top: 5em;
-}
 
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
 
 input {
   text-align: center;
@@ -26,6 +27,12 @@ input {
   border-style: none;
 }
 
+.warningCaps {
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  text-align: center;
+}
+
 form i {
   cursor: pointer;
 }
@@ -34,11 +41,14 @@ form i {
   font-family: 'Nunito';
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 400px) {
+
+
 
   body {
     background-image: url("../images/Background.svg");
   }
+
 
   nav {
     display: flex;
@@ -46,6 +56,7 @@ form i {
     align-items: flex-start;
   }
 }
+
 
 
 .wrapper {
@@ -136,16 +147,25 @@ nav {
 
 footer {
 
-
   width: 100%;
-  background-color: #530084;
+  background-color: white;
+
+
 }
 
 
+footer a {
+  color: black;
+}
+
+
+
+
 .copyright {
-  color: white;
+
+  color: black;
   font-size: 12px;
-  margin-bottom: 0;
+  margin-bottom: .5em;
   font-family: 'nunito';
 
 }

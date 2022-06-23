@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Roboto+Slab:wght@800&family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-body{
+body {
     background-color: #530084;
     color: white;
     overflow-x: hidden;
 }
 
 
-.tituloPagina{
+.tituloPagina {
     font-family: 'Roboto Slab', serif;
-    text-align: center; 
+    text-align: center;
     font-size: 32px;
     color: white;
 }
 
-.geral{
-    
+.geral {
+
     justify-content: center;
 }
 
-.email{
+.email {
     text-align: center;
     height: 53px;
     border: none;
@@ -28,14 +28,14 @@ body{
     border-radius: 20px;
 }
 
-.cult{
+.cult {
     text-align: center;
     height: 213px;
     border-radius: 31px;
     border: none;
 }
 
-.arquivo{
+.arquivo {
     padding: 50px;
     border: 6px dashed white;
     border-radius: 11px;
@@ -47,7 +47,7 @@ body{
     margin: 16px 0;
 }
 
-.arquivo.h1{
+.arquivo.h1 {
     align-items: center;
     font-family: 'Nunito', sans-serif;
 }
@@ -60,13 +60,13 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-.vagas{
+.vagas {
     width: 100%;
     margin: 0;
     display: flex;
 }
 
-.form-label{
+.form-label {
     color: white;
     margin-left: 20px;
 }
@@ -77,19 +77,21 @@ button {
     margin-left: 20px;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.08);
     transition: 2s;
 }
-.row>* { 
+
+.row>* {
     width: auto;
 }
-.add{
+
+.add {
     height: 72px;
     margin-top: 10px;
 }
 
-.btnpro{
+.btnpro {
     font-size: 1.5em;
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
@@ -118,6 +120,13 @@ button:hover{
     margin-bottom: 20px;
 }
 
+.card p {
+    max-width: 30ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .card:hover {
     transform: scale(1.02);
     transition: 0.7s;
@@ -140,7 +149,7 @@ button:hover{
 
 @media only screen and (max-width: 600px) {
 
-    nav{
+    nav {
         display: flex;
         justify-content: center;
         align-items: center;

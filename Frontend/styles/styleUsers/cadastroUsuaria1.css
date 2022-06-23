@@ -32,7 +32,7 @@ h1{
     width: 430px;
     height: 70px;
     border-radius: 11px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     text-align: center;  
 }
 
@@ -48,6 +48,17 @@ h1{
     height: 70px;
     border-radius: 11px; 
     border-bottom: 10px; 
+}
+
+.impForcaSenha{
+    font-family: 'Roboto Slab';
+    text-align: center;
+}
+
+form i{
+    cursor: pointer;
+    color: white;
+    align-content: center;
 }
 
 .avanço1{

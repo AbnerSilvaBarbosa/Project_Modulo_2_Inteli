@@ -28,6 +28,7 @@
                     <p id="error" style="color: yellow; font-family:'Nunito'; font-weight: 600;"></p>
                 </div>
                 <form>
+                    
                     <label class="inputLogin" for="email">Email</label>
                     <input id="email" type="text" placeholder="E-mail" class="user-select-all"><br><br>
                     <label class="inputLogin" for="password">Senhas</label>
@@ -90,16 +91,14 @@
             btn.setAttribute("onclick", "loginUser()")
         }
     })
+
     $("#option-2").change(function () {
         if ($(this).is(":checked")) {
             btn.setAttribute("onclick", "loginRecruit()")
         }
     })
 
-</script>
 
-<!-- alternar visualização da senha -->
-<script>
 
     const togglePassword = document.querySelector("#togglePassword");
     const password = document.querySelector("#password");
@@ -111,7 +110,7 @@
         password.setAttribute("type", type);
 
         // alternar entre olho aberto e fechado
-        this.classList.toggle("bi-eye");
+        this.classList.toggle("bi-eye");    
     });
 
     // prevenir submissão do form/evento
@@ -120,6 +119,24 @@
         e.preventDefault();
     });
 
+    // especificar campo de input
+    var input = document.getElementById("password");
+
+    // pegar parágrafo com texto a ser exibido no warning
+    var text = document.getElementById("warningCaps");
+    text.style.display = "none";
+
+    // quando o usuário digita qualquer coisa no campo de input, roda a função
+    input.addEventListener("keyup", function(event) {
+
+    // se o usuário aciona/tem acionado o Capslock, exibe o warning
+    if (event.getModifierState("CapsLock")) {
+        text.style.display = "block";
+    } else {
+        text.style.display = "none"
+    }
+    });
+</script>
 </script>
 
 <!-- <script src="/src/Frontend/script/showhideSenhas.js"></script> -->
