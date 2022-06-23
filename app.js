@@ -9,7 +9,7 @@ const rotas = require("./Routes/routes.js") // Trazendo os codigos de outra api 
 const app = express()
 app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
-app.use(express.static("../Frontend"))
+app.use(express.static("./Frontend"))
 
 
 const UserRoutes = require("./Routes/user.js")
